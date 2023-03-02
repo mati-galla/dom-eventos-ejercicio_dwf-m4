@@ -3,18 +3,18 @@ var verticalPos = 0;
 const redSquare = document.querySelector(".cuadrado-rojo");
 
 function keyDownHandler(e) {
-  console.log(e.keyCode);
-  switch (e.keyCode) {
-    case 37:
+  console.log(e.key);
+  switch (e.key) {
+    case "ArrowLeft":
       horizontalPos -= 5;
       break;
-    case 38:
+    case "ArrowUp":
       verticalPos -= 5;
       break;
-    case 39:
+    case "ArrowRight":
       horizontalPos += 5;
       break;
-    case 40:
+    case "ArrowDown":
       verticalPos += 5;
       break;
   }
@@ -24,7 +24,6 @@ function keyDownHandler(e) {
 
 function main() {
   document.addEventListener("keydown", keyDownHandler, false);
-  document.addEventListener("keyup", keyUpHandler, false);
 }
 
 main();
